@@ -1,0 +1,71 @@
+/* HEADER Homepage */
+
+.header{
+    background-image: url("/media/HeaderInter.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text-color{
+    text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
+}
+
+/* Header Squadra */
+
+.header-squadra{
+    background-image: linear-gradient(120deg, black, darkblue, blue);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Header Contatti */
+
+.header-contatti{
+    background-image: linear-gradient(120deg, black, darkblue, blue);
+    height: 95vh;
+}
+
+/* PAGINA CONTATTI */
+
+.box{
+    border: solid white 2px;
+    min-height: 250px;
+    max-width: 250px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.box:hover{
+    border: 3px solid white;
+    transform: translateY(-10px);
+}
+
+.icon{
+    font-size: 50px;
+}
+
+/* DIpendenti */
+
+.users-height{
+    height: 70vh;
+}
+
+/* Tickets */
+
+.tickets{
+    background-image: linear-gradient(120deg, black, darkblue, blue);
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+.card-img{
+    object-position: center;
+}
