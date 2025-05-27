@@ -12,7 +12,7 @@
     <h2>Verrai ricontattato al più presto dal nostro team!</h2>
 
     <h3>Riepilogo del tuo messaggio:</h3>
-    <p>{{$userData['message']}}</p>
+    <p>{{$user['message']}}</p>
 </body>
 
 </html>
