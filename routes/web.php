@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CommentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\TicketController;
@@ -20,4 +21,9 @@ Route::get('/ticket/detail/{id}', [TicketController::class, 'ticketDetail'])->na
 // Invio mail
 
 Route::post('/contact-us', [PublicController::class, 'contactUs'])->name('contactUs');
+
+// Comment
+
+Route::get('/squadra/commenti', [CommentController::class, 'create'])->name('squadra.commenti');
+Route::post('/commenti/aggiungi', [CommentController::class, 'store'])->name('commenti.aggiungi');;
 

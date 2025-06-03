@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\ContactMail;
 use Exception;
+use App\Models\Comment;
+use App\Mail\ContactMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -21,8 +22,9 @@ class PublicController extends Controller
     }
 
     public function team() {
-        ;
-        return view('squadra', ['users'=>$this->users]);
+        $comments = Comment::all();
+        
+        return view('squadra', ['users'=>$this->users, 'comments'=>$comments]);
     }
 
     public function squadraDetail($name){
