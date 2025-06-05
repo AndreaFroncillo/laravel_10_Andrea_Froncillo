@@ -40,12 +40,18 @@
                 <a href="{{route('squadra.commenti')}}" class="btn btn-dark mt-5" role="button">Clicca qui per inserire un commento</a>
             </div>
         </div>
+
         <section>
             <div class="container users-height">
                 <div class="row h-100 justify-content-around align-items-center">
                     @foreach ($comments as $comment)
                     <div class="col-12 col-md-4">
-                        <div class="card">
+                        <div class="card" style="width: 18rem;">
+                            @if($comment->img)
+                                <img src="https://picsum.photos/200/300" class="card-img-top card-img img-fluid" alt="Immagine di '{{$comment->name}}'">
+                            @else
+                                <img src="{{Storage::url($comment->img)}}" class="card-img-top card-img img-fluid" alt="Immagine di {{$comment->name}}">
+                            @endif
                             <div class="card-body">
                                 <h5 class="card-title">{{ $comment->name }} {{ $comment->surname }}</h5>
                                 <h6 class="card-subtitle mb-2 text-muted">{{ $comment->date }}</h6>
