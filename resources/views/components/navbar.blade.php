@@ -15,6 +15,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('contacts')}}">Contattaci</a>
                 </li>
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">I nostri servizi</a>
                     <ul class="dropdown-menu">
@@ -23,6 +24,22 @@
                         </li>
                     </ul>
                 </li>
+                @guest
+                <li>
+                    <a href="{{route('register')}}" class="nav-link">Registrati</a>
+                </li>
+                <li>
+                    <a href="{{route('login')}}" class="nav-link">Accedi</a>
+                </li>
+                @endguest
+                @auth
+                <li>
+                    <form action="{{route('logout')}}" method="POST">
+                        @csrf
+                        <button type="submit" class="nav-link">Logout</button>
+                    </form>
+                </li>
+                @endauth
             </ul>
         </div>
     </div>

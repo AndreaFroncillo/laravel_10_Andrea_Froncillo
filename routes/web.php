@@ -20,10 +20,13 @@ Route::get('/ticket/detail/{id}', [TicketController::class, 'ticketDetail'])->na
 
 // Invio mail
 
-Route::post('/contact-us', [PublicController::class, 'contactUs'])->name('contactUs');
+Route::post('/contact-us', [PublicController::class, 'contactUs'])->name('contactUs')->middleware('auth');
 
 // Comment
 
-Route::get('/squadra/commenti', [CommentController::class, 'create'])->name('squadra.commenti');
-Route::post('/commenti/aggiungi', [CommentController::class, 'store'])->name('commenti.aggiungi');;
+Route::get('/squadra/commenti', [CommentController::class, 'create'])->name('squadra.commenti')->middleware('auth');
+Route::post('/commenti/aggiungi', [CommentController::class, 'store'])->name('commenti.aggiungi');
+
+
+
 
